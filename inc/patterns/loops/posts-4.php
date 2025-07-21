@@ -3,18 +3,18 @@
  * Pattern
  *
  * @author Themeisle
- * @package church-fse
+ * @package eduacademy
  * @since 1.0.0
  *
  * slug: posts-4
  * title: Posts 4
- * categories: ChurchFSE
+ * categories: Eduacademy
  * keywords: posts, loop, blog
  */
 
 return array(
-	'title'      => __( 'Posts 4', 'church-fse' ),
-	'categories' => array( 'church-fse', 'posts' ),
+	'title'      => __( 'Posts 4', 'eduacademy' ),
+	'categories' => array( 'eduacademy', 'posts' ),
 	'keywords'   => array( 'posts', 'loop', 'blog' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"blockGap":"40px","margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"ti-bg-alt","layout":{"type":"constrained"}} -->

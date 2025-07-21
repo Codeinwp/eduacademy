@@ -3,20 +3,20 @@
  * Pattern
  *
  * @author Themeisle
- * @package church-fse
+ * @package eduacademy
  * @since 1.0.0
  *
  * slug: archive-list
  * title: Archive List
- * categories: ChurchFSE
+ * categories: Eduacademy
  * keywords: archive, posts, list
  */
 
-use ChurchFSE\Assets_Manager;
+use Eduacademy\Assets_Manager;
 
 return array(
-	'title'      => __( 'Archive List', 'church-fse' ),
-	'categories' => array( 'church-fse-layouts' ),
+	'title'      => __( 'Archive List', 'eduacademy' ),
+	'categories' => array( 'eduacademy-layouts' ),
 	'keywords'   => array( 'archive', 'posts', 'list' ),
 	'content'    => '
 <!-- wp:group {"tagName":"main","align":"full","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"0","margin":{"top":"0","bottom":"0"}}}} -->

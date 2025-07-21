@@ -3,20 +3,20 @@
  * Pattern
  *
  * @author Themeisle
- * @package church-fse
+ * @package eduacademy
  * @since 1.0.0
  *
  * slug: single-post-cover
  * title: Single Post 3 (Cover)
- * categories: ChurchFSE
+ * categories: Eduacademy
  * keywords: single, post, cover
  */
 
-use ChurchFSE\Assets_Manager;
+use Eduacademy\Assets_Manager;
 
 return array(
-	'title'      => __( 'Single Post 3 (Cover)', 'church-fse' ),
-	'categories' => array( 'church-fse-layouts' ),
+	'title'      => __( 'Single Post 3 (Cover)', 'eduacademy' ),
+	'categories' => array( 'eduacademy-layouts' ),
 	'keywords'   => array( 'single', 'post', 'cover', 'boxed' ),
 	'content'    => '
 <!-- wp:group {"tagName":"main","align":"full","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"0","margin":{"top":"0","bottom":"0"}}}} -->

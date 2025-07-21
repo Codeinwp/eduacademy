@@ -3,18 +3,18 @@
  * Patterns Handler.
  *
  * @author Themeisle
- * @package church-fse
+ * @package eduacademy
  * @since 1.0.0
  */
 
-namespace ChurchFSE;
+namespace Eduacademy;
 
 use WP_Block_Pattern_Categories_Registry;
 
 /**
  * Class Block_Patterns
  *
- * @package church-fse
+ * @package eduacademy
  */
 class Block_Patterns {
 
@@ -59,13 +59,13 @@ class Block_Patterns {
 	 */
 	private function setup_properties() {
 		$categories = array(
-			'church-fse'         => array(
-				'label'       => __( 'Church FSE Patterns', 'church-fse' ),
-				'description' => __( 'Patterns for several sections and components', 'church-fse' ),
+			'eduacademy'         => array(
+				'label'       => __( 'Eduacademy Patterns', 'eduacademy' ),
+				'description' => __( 'Patterns for several sections and components', 'eduacademy' ),
 			),
-			'church-fse-layouts' => array(
-				'label'       => __( 'Church FSE Layouts', 'church-fse' ),
-				'description' => __( 'Full-page layouts that can be used as templates', 'church-fse' ),
+			'eduacademy-layouts' => array(
+				'label'       => __( 'Eduacademy Layouts', 'eduacademy' ),
+				'description' => __( 'Full-page layouts that can be used as templates', 'eduacademy' ),
 			),
 		);
 
@@ -108,8 +108,8 @@ class Block_Patterns {
 			'page_titles/page-title-2',
 		);
 
-		$this->categories = apply_filters( 'church_fse_block_patterns_categories', $categories );
-		$this->patterns   = apply_filters( 'church_fse_block_patterns', $patterns );
+		$this->categories = apply_filters( 'eduacademy_block_patterns_categories', $categories );
+		$this->patterns   = apply_filters( 'eduacademy_block_patterns', $patterns );
 	}
 
 	/**
@@ -134,13 +134,13 @@ class Block_Patterns {
 	 */
 	private function register_patterns() {
 		foreach ( $this->patterns as $pattern ) {
-			$file = CHURCH_FSE_DIR . 'inc/patterns/' . $pattern . '.php';
+			$file = EDUACADEMY_DIR . 'inc/patterns/' . $pattern . '.php';
 
 			if ( ! is_file( $file ) ) {
 				continue;
 			}
 
-			register_block_pattern( 'church-fse/' . $pattern, require $file );
+			register_block_pattern( 'eduacademy/' . $pattern, require $file );
 		}
 	}
 }

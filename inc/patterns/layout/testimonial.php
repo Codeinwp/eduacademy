@@ -3,20 +3,20 @@
  * Pattern
  *
  * @author Themeisle
- * @package church-fse
+ * @package eduacademy
  * @since 1.0.0
  *
  * slug: testimonial
  * title: Testimonial
- * categories: ChurchFSE
+ * categories: Eduacademy
  * keywords: testimonials
  */
 
-use ChurchFSE\Assets_Manager;
+use Eduacademy\Assets_Manager;
 
 return array(
-	'title'      => __( 'Testimonial', 'church-fse' ),
-	'categories' => array( 'church-fse' ),
+	'title'      => __( 'Testimonial', 'eduacademy' ),
+	'categories' => array( 'eduacademy' ),
 	'keywords'   => array( 'testimonials' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|70","margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->

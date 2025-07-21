@@ -3,21 +3,21 @@
  * Constants class.
  *
  * @author Themeisle
- * @package church-fse
+ * @package eduacademy
  * @since 1.0.0
  */
 
-namespace ChurchFSE;
+namespace Eduacademy;
 
 /**
  * Class Constants
  *
- * @package church-fse
+ * @package eduacademy
  */
 class Constants {
 	const CACHE_KEYS = array(
-		'dismissed-welcome-notice' => 'church-fse-welcome-notice-dismissed',
+		'dismissed-welcome-notice' => 'eduacademy-welcome-notice-dismissed',
 	);
 
-	const PRODUCT_KEY = 'church_fse';
+	const PRODUCT_KEY = 'eduacademy';
 }

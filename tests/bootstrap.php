@@ -2,10 +2,10 @@
 /**
  * PHPUnit bootstrap file
  *
- * @package church-fse
+ * @package eduacademy
  */
 
-define( 'CHURCH_FSE_IGNORE_SOURCE_CHECK', true );
+define( 'EDUACADEMY_IGNORE_SOURCE_CHECK', true );
 
 $_tests_dir = getenv( 'WP_TESTS_DIR' );
 

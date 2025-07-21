@@ -3,20 +3,20 @@
  * Pattern
  *
  * @author Themeisle
- * @package church-fse
+ * @package eduacademy
  * @since 1.0.0
  *
  * slug: features-1
  * title: Features 1
- * categories: ChurchFSE
+ * categories: Eduacademy
  * keywords: features, cards, columns
  */
 
-use ChurchFSE\Assets_Manager;
+use Eduacademy\Assets_Manager;
 
 return array(
-	'title'      => __( 'Features', 'church-fse' ),
-	'categories' => array( 'church-fse' ),
+	'title'      => __( 'Features', 'eduacademy' ),
+	'categories' => array( 'eduacademy' ),
 	'keywords'   => array( 'features', 'cards', 'columns' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"blockGap":"var:preset|spacing|80","margin":{"top":"0","bottom":"0"}}},"backgroundColor":"ti-bg-alt","layout":{"type":"constrained"}} -->
