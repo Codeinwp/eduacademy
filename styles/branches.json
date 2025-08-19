@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/theme.json",
-  "title": "Forest",
+  "title": "Branches",
   "version": 2,
   "settings": {
     "color": {
@@ -17,22 +17,22 @@
         },
         {
           "slug": "ti-accent",
-          "color": "#4D9B67",
+          "color": "#52AC96",
           "name": "Accent"
         },
         {
           "slug": "ti-accent-secondary",
-          "color": "#396D4A",
+          "color": "#438C7A",
           "name": "Accent Secondary"
         },
         {
           "slug": "ti-bg-inv",
-          "color": "#0F0F0F",
+          "color": "#2B4C44",
           "name": "Background Dark"
         },
         {
           "slug": "ti-bg-alt",
-          "color": "#F4F4F4",
+          "color": "#FAF7F7",
           "name": "Background Alt"
         },
         {
