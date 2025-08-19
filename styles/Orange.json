@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/theme.json",
-  "title": "Violet",
+  "title": "Orange",
   "version": 2,
   "settings": {
     "color": {
@@ -17,12 +17,12 @@
         },
         {
           "slug": "ti-accent",
-          "color": "#996FB2",
+          "color": "#E5602F",
           "name": "Accent"
         },
         {
           "slug": "ti-accent-secondary",
-          "color": "#81529D",
+          "color": "#E5602F",
           "name": "Accent Secondary"
         },
         {
@@ -47,22 +47,22 @@
     "elements": {
       "heading": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--playfair-display)"
+          "fontFamily": "var(--wp--preset--font-family--inter)"
         }
       },
       "h1": {
         "typography": {
-          "fontWeight": "800"
+          "fontWeight": "600"
         }
       },
       "h2": {
         "typography": {
-          "fontWeight": "800"
+          "fontWeight": "600"
         }
       },
       "h3": {
         "typography": {
-          "fontWeight": "800"
+          "fontWeight": "600"
         }
       },
       "h4": {
@@ -82,7 +82,7 @@
       }
     },
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--source-sans-pro)"
+      "fontFamily": "var(--wp--preset--font-family--inter)"
     }
   }
 }
