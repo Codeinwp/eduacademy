@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/theme.json",
-  "title": "Charcoal",
+  "title": "Dark mode",
   "version": 2,
   "settings": {
     "color": {
@@ -17,12 +17,12 @@
         },
         {
           "slug": "ti-accent",
-          "color": "#958A6B",
+          "color": "#50BB40",
           "name": "Accent"
         },
         {
           "slug": "ti-accent-secondary",
-          "color": "#91835B",
+          "color": "#42A134",
           "name": "Accent Secondary"
         },
         {
@@ -77,12 +77,12 @@
       },
       "heading": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--fraunces)"
+          "fontFamily": "var(--wp--preset--font-family--spline-sans)"
         }
       }
     },
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--albert-sans)"
+      "fontFamily": "var(--wp--preset--font-family--spline-sans)"
     }
   }
 }
