@@ -6,16 +6,16 @@
  * @package eduacademy
  * @since 1.0.0
  *
- * slug: faq
- * title: faq
+ * slug: pricing-1
+ * title: Pricing 1
  * categories: Eduacademy
- * keywords: faq
+ * keywords: pricing
  */
 
 return array(
-	'title'      => __( 'FAQ', 'eduacademy' ),
+	'title'      => __( 'Pricing 1', 'eduacademy' ),
 	'categories' => array( 'eduacademy' ),
-	'keywords'   => array( 'faq' ),
+	'keywords'   => array( 'pricing' ),
 	'content'    => '
 	<!-- wp:group {"metadata":{"name":"FAQ"},"align":"full","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50","top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"},"blockGap":"var:preset|spacing|80","margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--50)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|70"}}}} -->

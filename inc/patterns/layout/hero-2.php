@@ -6,10 +6,10 @@
  * @package eduacademy
  * @since 1.0.0
  *
- * slug: content-1
- * title: Content 1
+ * slug: hero-2
+ * title: Simple Hero
  * categories: Eduacademy
- * keywords: content, grid
+ * keywords: hero, cover
  */
 
 use Eduacademy\Assets_Manager;
@@ -18,9 +18,9 @@ $eduacademy_img17 = Assets_Manager::get_image_url( 'theme-image-17.webp' );
 $eduacademy_img13 = Assets_Manager::get_image_url( 'theme-image-13.webp' );
 
 return array(
-	'title'      => __( 'Content 1', 'eduacademy' ),
+	'title'      => __( 'HSimple Hero', 'eduacademy' ),
 	'categories' => array( 'eduacademy' ),
-	'keywords'   => array( 'content', 'grid' ),
+	'keywords'   => array( 'hero', 'cover' ),
 	'content'    => '
 		<!-- wp:group {"metadata":{"name":"hero-2"},"align":"full","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50","top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"},"blockGap":"var:preset|spacing|80","margin":{"top":"0","bottom":"0"}},"background":{"backgroundImage":{"url":"' . esc_url( $eduacademy_img17 ) . '","id":163,"source":"file","title":"theme-image-17"},"backgroundSize":"1100px","backgroundPosition":"100% 0%","backgroundRepeat":"no-repeat"}},"backgroundColor":"ti-bg-alt","layout":{"type":"constrained"}} -->
 	<div class="wp-block-group alignfull has-ti-bg-alt-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--50)"><!-- wp:group {"align":"wide","layout":{"type":"grid","minimumColumnWidth":"28rem"}} -->

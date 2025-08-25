@@ -14,7 +14,7 @@
 
 use Eduacademy\Assets_Manager;
 
-$eduacademy_img04 = Assets_Manager::get_image_url( 'eduacademy-4.webp' );
+$eduacademy_img04 = Assets_Manager::get_image_url( 'theme-image-04.webp' );
 
 return array(
 	'title'      => __( 'Page Title', 'eduacademy' ),
