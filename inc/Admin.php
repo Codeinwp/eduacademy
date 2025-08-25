@@ -15,11 +15,11 @@ namespace Eduacademy;
 class Admin {
 
 	/**
-	 * WP Full Pay reference key.
+	 * Masteriyo reference key.
 	 *
 	 * @var string
 	 */
-	const WPFP_REF = 'wpfp_reference_key';
+	const MASTERIYO_REF = 'masteriyo_reference_key';
 
 	/**
 	 * Admin constructor.
@@ -51,12 +51,11 @@ class Admin {
 	 */
 	public function setup_admin_hooks() {
 		add_action( 'admin_notices', array( $this, 'render_welcome_notice' ), 0 );
-		add_action( 'activated_plugin', array( $this, 'after_wpfs_activation' ) );
+		add_action( 'activated_plugin', array( $this, 'after_masteriyo_activation' ) );
 		add_action( 'wp_ajax_eduacademy_dismiss_welcome_notice', array( $this, 'remove_welcome_notice' ) );
-		add_action( 'wp_ajax_eduacademy_set_wpfp_ref', array( $this, 'set_wpfp_ref' ) );
+		add_action( 'wp_ajax_eduacademy_set_masteriyo_ref', array( $this, 'set_masteriyo_ref' ) );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'register_internal_page' ) );
-		add_filter( 'themeisle_sdk_blackfriday_data', array( $this, 'add_black_friday_data' ) );
 	}
 
 	/**
@@ -69,7 +68,7 @@ class Admin {
 			return;
 		}
 
-		$wpfp_status = $this->get_wpfp_status();
+		$masteriyo_status = $this->get_masteriyo_status();
 
 		Assets_Manager::enqueue_style( Assets_Manager::ASSETS_SLUGS['welcome-notice'], 'welcome-notice' );
 		Assets_Manager::enqueue_script(
@@ -78,26 +77,26 @@ class Admin {
 			true,
 			array(),
 			array(
-				'nonce'         => wp_create_nonce( 'eduacademy-dismiss-welcome-notice' ),
-				'wpfpRefNonce'  => wp_create_nonce( 'eduacademy-set-wpfp-ref' ),
-				'ajaxUrl'       => esc_url( admin_url( 'admin-ajax.php' ) ),
-				'wpfpStatus'    => $wpfp_status,
-				'activationUrl' => esc_url(
+				'nonce'             => wp_create_nonce( 'eduacademy-dismiss-welcome-notice' ),
+				'masteriyoRefNonce' => wp_create_nonce( 'eduacademy-set-masteriyo-ref' ),
+				'ajaxUrl'           => esc_url( admin_url( 'admin-ajax.php' ) ),
+				'masteriyoStatus'   => $masteriyo_status,
+				'activationUrl'     => esc_url(
 					add_query_arg(
 						array(
 							'plugin_status' => 'all',
 							'paged'         => '1',
 							'action'        => 'activate',
-							'plugin'        => rawurlencode( 'wp-full-stripe-free/wp-full-stripe.php' ),
-							'_wpnonce'      => wp_create_nonce( 'activate-plugin_wp-full-stripe-free/wp-full-stripe.php' ),
+							'plugin'        => rawurlencode( 'learning-management-system/lms.php' ),
+							'_wpnonce'      => wp_create_nonce( 'activate-plugin_learning-management-system/lms.php' ),
 						),
 						admin_url( 'plugins.php' )
 					)
 				),
-				'redirectUrl'   => esc_url( admin_url( 'admin.php?page=wpfs-settings-stripe&onboarding=true' ) ),
-				'activating'    => __( 'Activating', 'eduacademy' ) . '&hellip;',
-				'installing'    => __( 'Installing', 'eduacademy' ) . '&hellip;',
-				'done'          => __( 'Done', 'eduacademy' ),
+				'redirectUrl'       => esc_url( admin_url( 'admin.php?page=masteriyo-onboard' ) ),
+				'activating'        => __( 'Activating', 'eduacademy' ) . '&hellip;',
+				'installing'        => __( 'Installing', 'eduacademy' ) . '&hellip;',
+				'done'              => __( 'Done', 'eduacademy' ),
 			)
 		);
 
@@ -108,36 +107,36 @@ class Admin {
 		$notice_html .= '<div class="notice-copy">';
 
 		$notice_html .= '<h2 class="notice-subtitle">';
-		$notice_html .= '<span class="dashicons dashicons-star-filled"></span>';
-		/* translators: %s: 🎉 emoji */
-		$notice_html .= sprintf( __( 'Accept Donations on Your Church Site %s', 'eduacademy' ), '🎉' );
+		$notice_html .= '<span class="dashicons dashicons-welcome-learn-more"></span>';
+		$notice_html .= __( 'The theme was designed to work best with Masteriyo LMS', 'eduacademy' );
 		$notice_html .= '</h2>';
 
 		$notice_html .= '<h1 class="notice-title">';
-		/* translators: %s: WP Full Pay */
-		$notice_html .= sprintf( __( 'Start Collecting Funds with %s!', 'eduacademy' ), '<span>WP Full Pay</span>' );
+		/* translators: %s: Masteriyo LMS */
+		$notice_html .= sprintf( __( 'Create and Sell Online Courses with %s!', 'eduacademy' ), '<span>Masteriyo LMS</span>' );
 
 		$notice_html .= '</h1>';
 
-		$notice_html .= '<p class="description">' . __( 'The simplest way to accept donations and payments on your WordPress site. Set up in minutes with no technical knowledge required.', 'eduacademy' ) . '</p>';
-		$notice_html .= '<p class="description"><span class="dashicons dashicons-yes"></span><strong>' . __( 'Quick setup', 'eduacademy' ) . '</strong> - ' . __( 'Connect to Stripe and create your first donation form in minutes', 'eduacademy' ) . '</p>';
-		$notice_html .= '<p class="description"><span class="dashicons dashicons-yes"></span><strong>' . __( 'Multiple payment options', 'eduacademy' ) . '</strong> - ' . __( 'One-time and recurring donations with customizable amounts', 'eduacademy' ) . '</p>';
+		$notice_html .= '<p class="description">' . __( 'The complete WordPress LMS solution for educators and businesses. Build engaging courses, track student progress, and monetize your knowledge with zero coding required. ', 'eduacademy' ) . '</p>';
+		$notice_html .= '<p class="description"><span class="dashicons dashicons-yes"></span><strong>' . __( 'Quick setup', 'eduacademy' ) . '</strong> - ' . __( 'Install and create your first course in minutes', 'eduacademy' ) . '</p>';
+		$notice_html .= '<p class="description"><span class="dashicons dashicons-yes"></span><strong>' . __( 'Multiple payment options', 'eduacademy' ) . '</strong> - ' . __( 'Built-in payment system with Stripe, PayPal & more', 'eduacademy' ) . '</p>';
+		$notice_html .= '<p class="description"><span class="dashicons dashicons-yes"></span><strong>' . __( 'Complete course builder', 'eduacademy' ) . '</strong> - ' . __( 'Drag & drop builder with quizzes, certificates & assignments', 'eduacademy' ) . '</p>';
 
 		$notice_html .= '<div class="actions">';
 
-		/* translators: %s: WP Full Pay */
-		$notice_html .= '<button id="eduacademy-install-wpfp" class="button button-primary button-hero">';
+		/* translators: %s: Masteriyo LMS */
+		$notice_html .= '<button id="eduacademy-install-masteriyo" class="button button-primary button-hero">';
 		$notice_html .= '<span class="dashicons dashicons-update hidden"></span>';
 		$notice_html .= '<span class="text">';
-		$notice_html .= 'installed' === $wpfp_status ?
-			/* translators: %s: WP Full Pay */
-			sprintf( __( 'Activate %s', 'eduacademy' ), 'WP Full Pay' ) :
-			/* translators: %s: WP Full Pay */
-			sprintf( __( 'Install & Activate %s', 'eduacademy' ), 'WP Full Pay' );
+		$notice_html .= 'installed' === $masteriyo_status ?
+			/* translators: %s: Masteriyo LMS */
+			sprintf( __( 'Activate %s', 'eduacademy' ), 'Masteriyo LMS' ) :
+			/* translators: %s: Masteriyo LMS */
+			sprintf( __( 'Install & Activate %s', 'eduacademy' ), 'Masteriyo LMS' );
 		$notice_html .= '</span>';
 		$notice_html .= '</button>';
 
-		$notice_html .= '<a href="https://wordpress.org/plugins/wp-full-stripe-free/" target="_blank" class="button button-secondary button-hero">';
+		$notice_html .= '<a href="https://wordpress.org/plugins/learning-management-system/" target="_blank" class="button button-secondary button-hero">';
 		$notice_html .= '<span>' . __( 'Learn More', 'eduacademy' ) . '</span>';
 		$notice_html .= '<span class="dashicons dashicons-external"></span>';
 		$notice_html .= '</a>';
@@ -146,7 +145,7 @@ class Admin {
 
 		$notice_html .= '</div>';
 
-		$notice_html .= '<img class="wpfp-preview" src="' . esc_url( Assets_Manager::get_image_url( 'welcome-notice.png' ) ) . '" alt="' . esc_attr__( 'WP Full Pay preview', 'eduacademy' ) . '"/>';
+		$notice_html .= '<img class="masteriyo-preview" src="' . esc_url( Assets_Manager::get_image_url( 'welcome-notice.webp' ) ) . '" alt="' . esc_attr__( 'Masteriyo LMS preview', 'eduacademy' ) . '"/>';
 		$notice_html .= '</div>';
 		$notice_html .= '</div>';
 
@@ -176,8 +175,8 @@ class Admin {
 	 * @return bool
 	 */
 	private function should_show_welcome_notice(): bool {
-		// Already using WPFP.
-		if ( is_plugin_active( 'wp-full-stripe-free/wp-full-stripe.php' ) ) {
+		// Already using Masteriyo.
+		if ( is_plugin_active( 'learning-management-system/lms.php' ) ) {
 			return false;
 		}
 
@@ -231,18 +230,18 @@ class Admin {
 	}
 
 	/**
-	 * Get the WP Full Pay plugin status.
+	 * Get the Masteriyo plugin status.
 	 *
 	 * @return string
 	 */
-	private function get_wpfp_status(): string {
+	private function get_masteriyo_status(): string {
 		$status = 'not-installed';
 
-		if ( is_plugin_active( 'wp-full-stripe-free/wp-full-stripe.php' ) ) {
+		if ( is_plugin_active( 'learning-management-system/lms.php' ) ) {
 			return 'active';
 		}
 
-		if ( file_exists( ABSPATH . 'wp-content/plugins/wp-full-stripe-free/wp-full-stripe.php' ) ) {
+		if ( file_exists( ABSPATH . 'wp-content/plugins/learning-management-system/lms.php' ) ) {
 			return 'installed';
 		}
 
@@ -250,14 +249,14 @@ class Admin {
 	}
 
 	/**
-	 * Run after WP Full Pay activation.
+	 * Run after Masteriyo activation.
 	 *
 	 * @param string $plugin Plugin name.
 	 *
 	 * @return void
 	 */
-	public function after_wpfs_activation( $plugin ) {
-		if ( 'wp-full-stripe-free/wp-full-stripe.php' !== $plugin ) {
+	public function after_masteriyo_activation( $plugin ) {
+		if ( 'learning-management-system/lms.php' !== $plugin ) {
 			return;
 		}
 
@@ -266,45 +265,18 @@ class Admin {
 	}
 
 	/**
-	 * Update WP Full Pay reference key.
+	 * Update Masteriyo reference key.
 	 *
 	 * @return void
 	 */
-	public function set_wpfp_ref() {
-		if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'eduacademy-set-wpfp-ref' ) ) {
+	public function set_masteriyo_ref() {
+		if ( empty( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'eduacademy-set-masteriyo-ref' ) ) {
 			return;
 		}
 
-		update_option( self::WPFP_REF, 'eduacademy' );
+		update_option( self::MASTERIYO_REF, 'eduacademy' );
 
 		wp_send_json_success();
-	}
-
-	/**
-	 * Add Black Friday data.
-	 *
-	 * @param array $configs The configuration array for the loaded products.
-	 *
-	 * @return array
-	 */
-	public function add_black_friday_data( $configs ) {
-		$config = $configs['default'];
-
-		// translators: %1$s - plugin name, %2$s - discount.
-		$message_template = __( 'Need to accept payments or donations? Try %1$s, built by the same team as your theme — now up to %2$s OFF, for a limited time only.', 'eduacademy' );
-
-		$config['dismiss']  = true; // Note: Allow dismiss since it appears on `/wp-admin`.
-		$config['message']  = sprintf( $message_template, 'WP Full Pay', '70%' );
-		$config['sale_url'] = add_query_arg(
-			array(
-				'utm_term' => 'free',
-			),
-			tsdk_translate_link( tsdk_utmify( 'https://themeisle.link/wpfp-bf', 'bfcm', 'eduacademy' ) )
-		);
-
-		$configs[ EDUACADEMY_PRODUCT_SLUG ] = $config;
-
-		return $configs;
 	}
 
 	/**
