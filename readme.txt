@@ -2,7 +2,7 @@
 Contributors: themeisle
 Tags: block-patterns
 Requires at least: 5.5
-Tested up to: 6.4
+Tested up to: 6.8
 Stable tag: trunk
 Requires PHP: 7.0
 License: GPLv2 or later
@@ -32,3 +32,4 @@ All images are licensed under CC0.
 - https://commons.wikimedia.org/wiki/File:CSS.3.svg
 - https://commons.wikimedia.org/wiki/File:JavaScript_shield_logo_(no_text).svg
 - All icons are from the [themeisle pack](https://themeisle.com/free-icons/)
+- welcome-notice.webp, theme-image-16.webp and theme-image-17.webp are custom made images for this theme and are also licensed under CC03
