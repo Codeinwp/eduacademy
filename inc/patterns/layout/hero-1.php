@@ -7,42 +7,138 @@
  * @since 1.0.0
  *
  * slug: hero-1
- * title: Hero Section
+ * title: Hero with courses
  * categories: Eduacademy
- * keywords: hero, cover
+ * keywords: hero, cover, courses
  */
 
 use Eduacademy\Assets_Manager;
 
-$eduacademy_img03 = Assets_Manager::get_image_url( 'eduacademy-3.webp' );
+$eduacademy_img17 = Assets_Manager::get_image_url( 'theme-image-17.webp' );
+$eduacademy_img13 = Assets_Manager::get_image_url( 'theme-image-13.webp' );
+$eduacademy_img04 = Assets_Manager::get_image_url( 'theme-image-04.webp' );
+$eduacademy_img05 = Assets_Manager::get_image_url( 'theme-image-05.webp' );
+$eduacademy_img06 = Assets_Manager::get_image_url( 'theme-image-06.webp' );
 
 return array(
-	'title'      => __( 'Hero Section', 'eduacademy' ),
+	'title'      => __( 'Hero with Courses', 'eduacademy' ),
 	'categories' => array( 'eduacademy' ),
-	'keywords'   => array( 'hero', 'cover' ),
+	'keywords'   => array( 'hero', 'cover', 'courses' ),
 	'content'    => '
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"right":"0","left":"0","top":"0","bottom":"0"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:cover {"url":"' . esc_url( $eduacademy_img03 ) . '","id":298,"hasParallax":true,"dimRatio":90,"overlayColor":"ti-bg-inv","isUserOverlayColor":true,"minHeight":75,"minHeightUnit":"vh","contentPosition":"center center","align":"full","style":{"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"},"margin":{"top":"0","bottom":"0"}}}} -->
-<div class="wp-block-cover alignfull has-parallax" style="margin-top:0;margin-bottom:0;padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px;min-height:75vh"><span aria-hidden="true" class="wp-block-cover__background has-ti-bg-inv-background-color has-background-dim-90 has-background-dim"></span><div class="wp-block-cover__image-background wp-image-298 has-parallax" style="background-position:50% 50%;background-image:url(' . esc_url( $eduacademy_img03 ) . ')"></div><div class="wp-block-cover__inner-container"><!-- wp:group {"textColor":"ti-fg-alt","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-ti-fg-alt-color has-text-color"><!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"700"}},"fontSize":"small"} -->
-<p class="has-text-align-center has-small-font-size" style="font-style:normal;font-weight:700;text-transform:uppercase"><strong>Sanctus Ipsum</strong></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {"textAlign":"center","level":1,"fontSize":"huge"} -->
-<h1 class="wp-block-heading has-text-align-center has-huge-font-size">Gloria in excelsis Deo, et pax hominibus bonae voluntatis.</h1>
+	<!-- wp:group {"metadata":{"name":"hero with courses"},"align":"full","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50","top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"},"blockGap":"var:preset|spacing|80"},"background":{"backgroundImage":{"url":"' . esc_url( $eduacademy_img17 ) . '","id":163,"source":"file","title":"theme-image-17"},"backgroundSize":"1100px","backgroundPosition":"100% 0%","backgroundRepeat":"no-repeat"}},"backgroundColor":"ti-bg-alt","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-ti-bg-alt-background-color has-background" style="padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--50)"><!-- wp:group {"align":"wide","layout":{"type":"grid","minimumColumnWidth":"28rem"}} -->
+<div class="wp-block-group alignwide"><!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"left","verticalAlignment":"center"}} -->
+<div class="wp-block-group"><!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Build Your Skills. One Lesson at a Time.</h1>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">Gloria in excelsis Deo, et pax hominibus bonae voluntatis. Benediximus te, adoramus te, glorificamus nomen tuum in saecula saeculorum. Amen.</p>
+<!-- wp:paragraph {"fontSize":"medium"} -->
+<p class="has-medium-font-size">Join thousands of students learning in-demand skills with step-by-step courses, practical exercises, and expert guidance.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:buttons {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|20","left":"var:preset|spacing|20"}}},"layout":{"type":"flex","justifyContent":"center"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"ti-accent"} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-ti-accent-background-color has-background wp-element-button">Button text</a></div>
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|luminous-vivid-amber"}}}},"textColor":"luminous-vivid-amber"} -->
+<p class="has-luminous-vivid-amber-color has-text-color has-link-color">★★★★★</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>1K+ reviews</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:image {"id":104,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"16px"}}} -->
+<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( $eduacademy_img13 ) . '" alt="" class="wp-image-104" style="border-radius:16px;aspect-ratio:1;object-fit:cover"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"align":"wide","layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
+<div class="wp-block-group alignwide"><!-- wp:group {"metadata":{"name":"course card"},"style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50","top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"},"blockGap":"var:preset|spacing|40"}},"backgroundColor":"ti-bg","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-ti-bg-background-color has-background" style="padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)"><!-- wp:image {"id":107,"aspectRatio":"4/3","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"16px"}}} -->
+<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( $eduacademy_img04 ) . '" alt="" class="wp-image-107" style="border-radius:16px;aspect-ratio:4/3;object-fit:cover"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:group {"metadata":{"name":"content wrapper"},"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","fontSize":"medium"} -->
+<h2 class="wp-block-heading has-text-align-center has-medium-font-size">HTML Basics</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
+<p class="has-text-align-center has-small-font-size">12 lessons / 9.5 hours</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">Learn the structure of the web and build your first webpage.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"width":100} -->
+<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link wp-element-button">Enroll</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
-<!-- /wp:group --></div></div>
-<!-- /wp:cover --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group -->
-        ',
+
+<!-- wp:group {"metadata":{"name":"course card"},"style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50","top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"},"blockGap":"var:preset|spacing|40"},"border":{"radius":"16px"}},"backgroundColor":"ti-bg","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-ti-bg-background-color has-background" style="border-radius:16px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)"><!-- wp:image {"id":106,"aspectRatio":"4/3","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"16px"}}} -->
+<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( $eduacademy_img05 ) . '" alt="" class="wp-image-106" style="border-radius:16px;aspect-ratio:4/3;object-fit:cover"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:group {"metadata":{"name":"content wrapper"},"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","fontSize":"medium"} -->
+<h2 class="wp-block-heading has-text-align-center has-medium-font-size">CSS Fundamentals</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
+<p class="has-text-align-center has-small-font-size">12 lessons / 9.5 hours</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">Style your pages with clean, scalable, and responsive designs.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"width":100} -->
+<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link wp-element-button">Enroll</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"metadata":{"name":"course card"},"style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50","top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"},"blockGap":"var:preset|spacing|40"},"border":{"radius":"16px"}},"backgroundColor":"ti-bg","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-ti-bg-background-color has-background" style="border-radius:16px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)"><!-- wp:image {"id":105,"aspectRatio":"4/3","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"16px"}}} -->
+<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( $eduacademy_img06 ) . '" alt="" class="wp-image-105" style="border-radius:16px;aspect-ratio:4/3;object-fit:cover"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:group {"metadata":{"name":"content wrapper"},"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","fontSize":"medium"} -->
+<h2 class="wp-block-heading has-text-align-center has-medium-font-size">JavaScript Essentials</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
+<p class="has-text-align-center has-small-font-size">12 lessons / 9.5 hours</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">Bring interactivity and logic to your web projects.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"width":100} -->
+<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link wp-element-button">Enroll</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+',
 );

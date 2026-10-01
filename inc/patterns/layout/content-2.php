@@ -9,60 +9,42 @@
  * slug: content-2
  * title: Content 2
  * categories: Eduacademy
- * keywords: content, columns, cover
+ * keywords: content
  */
 
 use Eduacademy\Assets_Manager;
 
-$eduacademy_img03 = Assets_Manager::get_image_url( 'eduacademy-3.webp' );
-$eduacademy_img04 = Assets_Manager::get_image_url( 'eduacademy-4.webp' );
-$eduacademy_img05 = Assets_Manager::get_image_url( 'eduacademy-5.webp' );
+$eduacademy_img13 = Assets_Manager::get_image_url( 'theme-image-13.webp' );
 
 return array(
 	'title'      => __( 'Content 2', 'eduacademy' ),
 	'categories' => array( 'eduacademy' ),
-	'keywords'   => array( 'content', 'columns', 'cover' ),
+	'keywords'   => array( 'content' ),
 	'content'    => '
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"blockGap":"64px","margin":{"top":"0px","bottom":"0px"}},"background":{"backgroundImage":{"url":"' . esc_url( $eduacademy_img05 ) . '","id":300,"source":"file","title":"eduacademy-5"},"backgroundSize":"cover","backgroundPosition":"51% 90%"}},"backgroundColor":"ti-bg-alt","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-ti-bg-alt-background-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px"><!-- wp:columns {"align":"wide"} -->
-<div class="wp-block-columns alignwide"><!-- wp:column {"verticalAlignment":"top"} -->
-<div class="wp-block-column is-vertically-aligned-top"><!-- wp:group {"layout":{"type":"constrained","justifyContent":"left"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"},"elements":{"link":{"color":{"text":"var:preset|color|ti-accent"}}}},"textColor":"ti-accent","fontSize":"small"} -->
-<p class="has-ti-accent-color has-text-color has-link-color has-small-font-size" style="text-transform:uppercase"><strong><strong>Sanctus Ipsum</strong></strong></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading -->
-<h2 class="wp-block-heading">The Power of Faith and Worship</h2>
+	<!-- wp:columns {"metadata":{"name":"content 2"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"blockGap":{"top":"0","left":"0"},"padding":{"right":"0","left":"0","top":"0","bottom":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|ti-fg-alt"}}}},"backgroundColor":"ti-bg-inv","textColor":"ti-fg-alt"} -->
+<div class="wp-block-columns alignfull has-ti-fg-alt-color has-ti-bg-inv-background-color has-text-color has-background has-link-color" style="margin-top:0;margin-bottom:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:column {"verticalAlignment":"center","width":"50%","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50","top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"},"blockGap":"0"}}} -->
+<div class="wp-block-column is-vertically-aligned-center" style="padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--50);flex-basis:50%"><!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:heading {"textAlign":"center"} -->
+<h2 class="wp-block-heading has-text-align-center">Ready to start your learning journey? </h2>
 <!-- /wp:heading -->
 
-<!-- wp:separator {"backgroundColor":"ti-accent"} -->
-<hr class="wp-block-separator has-text-color has-ti-accent-color has-alpha-channel-opacity has-ti-accent-background-color has-background"/>
-<!-- /wp:separator -->
+<!-- wp:paragraph {"align":"center","fontSize":"medium"} -->
+<p class="has-text-align-center has-medium-font-size">Contact us today to explore our courses, ask questions, or get personalized recommendations. We’re here to help you gain the skills to build and launch your own web projects.</p>
+<!-- /wp:paragraph -->
 
-<!-- wp:paragraph -->
-<p>Verbum Dei lucet in tenebris, et tenebrae eam non comprehenderunt. Dominus pastor meus est, nihil mihi deerit; in pascuis virentibus me collocavit, ad aquas quietis me duxit.</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group -->
-
-<!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-fill"} -->
-<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button">Learn more</a></div>
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline","fontSize":"medium"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-medium-font-size has-custom-font-size wp-element-button">Get in touch</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
+<!-- /wp:group --></div>
 <!-- /wp:column -->
 
-<!-- wp:column -->
-<div class="wp-block-column"><!-- wp:image {"id":298,"aspectRatio":"3/4","scale":"cover","sizeSlug":"full","linkDestination":"none","className":"size-full","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( $eduacademy_img03 ) . '" alt="" class="wp-image-298" style="border-radius:8px;aspect-ratio:3/4;object-fit:cover"/></figure>
-<!-- /wp:image --></div>
-<!-- /wp:column -->
-
-<!-- wp:column -->
-<div class="wp-block-column"><!-- wp:image {"id":299,"aspectRatio":"3/4","scale":"cover","sizeSlug":"full","linkDestination":"none","className":"size-full","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( $eduacademy_img04 ) . '" alt="" class="wp-image-299" style="border-radius:8px;aspect-ratio:3/4;object-fit:cover"/></figure>
-<!-- /wp:image --></div>
+<!-- wp:column {"width":"50%"} -->
+<div class="wp-block-column" style="flex-basis:50%"><!-- wp:group {"style":{"dimensions":{"minHeight":"600px"},"background":{"backgroundImage":{"url":"' . esc_url( $eduacademy_img13 ) . '","id":104,"source":"file","title":"theme-image-13"},"backgroundSize":"cover"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="min-height:600px"></div>
+<!-- /wp:group --></div>
 <!-- /wp:column --></div>
-<!-- /wp:columns --></div>
-<!-- /wp:group -->
-        ',
+<!-- /wp:columns -->
+',
 );

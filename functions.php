@@ -67,7 +67,7 @@ function check_php() {
  * @return void
  */
 function define_constants() {
-	define( 'EDUACADEMY_VERSION', '0.1' );
+	define( 'EDUACADEMY_VERSION', '0.0.1' );
 	define( 'EDUACADEMY_DEBUG', defined( 'WP_DEBUG' ) && WP_DEBUG === true );
 	define( 'EDUACADEMY_DIR', trailingslashit( get_template_directory() ) );
 	define( 'EDUACADEMY_URL', trailingslashit( get_template_directory_uri() ) );

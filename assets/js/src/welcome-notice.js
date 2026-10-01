@@ -11,12 +11,12 @@ function handleWelcomeNotice( $ ) {
 		redirectUrl,
 		ajaxUrl,
 		nonce,
-		wpfpRefNonce,
-		wpfpStatus,
+		masteriyoRefNonce,
+		masteriyoStatus,
 	} = eduacademyData;
 
 	const installBtn = $(
-		'.eduacademy-welcome-notice #eduacademy-install-wpfp'
+		'.eduacademy-welcome-notice #eduacademy-install-masteriyo'
 	);
 	const dismissBtn = $( '.eduacademy-welcome-notice .notice-dismiss' );
 	const notice = $( '.eduacademy-welcome-notice' );
@@ -31,13 +31,13 @@ function handleWelcomeNotice( $ ) {
 		} );
 	};
 
-	const activateWpfp = async () => {
+	const activateMasteriyo = async () => {
 		installText.text( activating );
 		await activatePlugin( activationUrl );
 
 		await $.post( ajaxUrl, {
-			nonce: wpfpRefNonce,
-			action: 'eduacademy_set_wpfp_ref',
+			nonce: masteriyoRefNonce,
+			action: 'eduacademy_set_masteriyo_ref',
 		} );
 
 		installSpinner.removeClass( 'dashicons-update' );
@@ -51,18 +51,18 @@ function handleWelcomeNotice( $ ) {
 		installSpinner.removeClass( 'hidden' );
 		installBtn.attr( 'disabled', true );
 
-		if ( wpfpStatus === 'active' ) {
+		if ( masteriyoStatus === 'active' ) {
 			return;
 		}
 
-		if ( wpfpStatus === 'installed' ) {
-			await activateWpfp();
+		if ( masteriyoStatus === 'installed' ) {
+			await activateMasteriyo();
 			return;
 		}
 
 		installText.text( installing );
-		await installPlugin( 'wp-full-stripe-free' );
-		await activateWpfp();
+		await installPlugin( 'learning-management-system' );
+		await activateMasteriyo();
 	} );
 
 	$( dismissBtn ).on( 'click', () => {
