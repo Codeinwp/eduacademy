@@ -56,6 +56,7 @@ class Admin {
 		add_action( 'wp_ajax_eduacademy_set_masteriyo_ref', array( $this, 'set_masteriyo_ref' ) );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'register_internal_page' ) );
+		add_filter( 'eduacademy_ai_connect_metadata', array( $this, 'get_ai_connect_metadata' ) );
 	}
 
 	/**
@@ -292,5 +293,26 @@ class Admin {
 		}
 		
 		do_action( 'themeisle_internal_page', EDUACADEMY_PRODUCT_SLUG, $screen->id );
+	}
+
+	/**
+	 * Get the data for the SDK "Connect your AI agent" module.
+	 *
+	 * @return array<string, string|string[]>
+	 */
+	public function get_ai_connect_metadata() {
+		return array(
+			'name'         => 'EduAcademy',
+			'notice_cases' => array(
+				__( 'change your site\'s style', 'eduacademy' ),
+				__( 'edit your header and footer', 'eduacademy' ),
+				__( 'add a courses or testimonials section to a page', 'eduacademy' ),
+			),
+			'prompts'      => array(
+				__( 'Apply the EduAcademy style variation with the navy palette and keep my fonts.', 'eduacademy' ),
+				__( 'Add an Enroll now button to my header, linking to /courses.', 'eduacademy' ),
+				__( 'Insert a featured courses pattern from my theme into the home page, under the hero.', 'eduacademy' ),
+			),
+		);
 	}
 }
