@@ -9,112 +9,78 @@
  * slug: features-2
  * title: Features 2
  * categories: Eduacademy
- * keywords: features, cards, columns
+ * keywords: features, grid
  */
 
 use Eduacademy\Assets_Manager;
 
+$eduacademy_img13 = Assets_Manager::get_image_url( 'theme-image-13.webp' );
+$eduacademy_img03 = Assets_Manager::get_image_url( 'theme-image-03.webp' );
+$eduacademy_img02 = Assets_Manager::get_image_url( 'theme-image-02.webp' );
+
 return array(
-	'title'      => __( 'Features', 'eduacademy' ),
+	'title'      => __( 'Features 2', 'eduacademy' ),
 	'categories' => array( 'eduacademy' ),
-	'keywords'   => array( 'features', 'cards', 'columns' ),
+	'keywords'   => array( 'features', 'grid' ),
 	'content'    => '
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"},"blockGap":"var:preset|spacing|70"}},"layout":{"inherit":true,"type":"constrained"}} -->
-<div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px"><!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignwide"><!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"700"},"elements":{"link":{"color":{"text":"var:preset|color|ti-accent"}}}},"textColor":"ti-accent","fontSize":"small"} -->
-<p class="has-text-align-center has-ti-accent-color has-text-color has-link-color has-small-font-size" style="font-style:normal;font-weight:700;text-transform:uppercase"><strong>Sanctus Ipsum</strong></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center">Gloria in excelsis Deo, et pax hominibus bonae voluntatis.</h2>
+	<!-- wp:group {"metadata":{"name":"features 2"},"align":"full","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50","top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"},"blockGap":"var:preset|spacing|80","margin":{"top":"0","bottom":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|ti-fg-alt"}}}},"backgroundColor":"ti-bg-inv","textColor":"ti-fg-alt","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-ti-fg-alt-color has-ti-bg-inv-background-color has-text-color has-background has-link-color" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--50)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|80"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide"><!-- wp:group {"align":"wide","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
+<div class="wp-block-group alignwide"><!-- wp:heading {"textAlign":"center","align":"wide"} -->
+<h2 class="wp-block-heading alignwide has-text-align-center">Why Choose us</h2>
 <!-- /wp:heading -->
 
-<!-- wp:separator {"backgroundColor":"ti-accent"} -->
-<hr class="wp-block-separator has-text-color has-ti-accent-color has-alpha-channel-opacity has-ti-accent-background-color has-background"/>
-<!-- /wp:separator -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Choose your plan</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group -->
 
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">Verbum Dei lucet in tenebris, et tenebrae eam non comprehenderunt. Dominus pastor meus est, nihil mihi deerit; in pascuis virentibus me collocavit, ad aquas quietis me duxit.</p>
+<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|70"}},"layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
+<div class="wp-block-group alignwide"><!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:image {"id":104,"sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"16px"}}} -->
+<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( $eduacademy_img13 ) . '" alt="" class="wp-image-104" style="border-radius:16px"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Global Community</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"left"} -->
+<p class="has-text-align-left">Connect with learners from all over the world. Share ideas, collaborate on projects, and grow together in an inclusive, supportive environment.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignwide"><!-- wp:columns {"align":"wide"} -->
-<div class="wp-block-columns alignwide"><!-- wp:column {"width":"33.34%"} -->
-<div class="wp-block-column" style="flex-basis:33.34%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"32px","right":"32px","bottom":"32px","left":"32px"},"blockGap":"16px"},"border":{"radius":"8px"}},"backgroundColor":"ti-bg-alt","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-ti-bg-alt-background-color has-background" style="border-radius:8px;padding-top:32px;padding-right:32px;padding-bottom:32px;padding-left:32px"><!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium"} -->
-<h3 class="wp-block-heading has-text-align-center has-medium-font-size">Title goes here</h3>
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:image {"id":108,"sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"16px"}}} -->
+<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( $eduacademy_img03 ) . '" alt="" class="wp-image-108" style="border-radius:16px"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Premium Content Quality</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">Gloria in excelsis Deo, et pax hominibus bonae voluntatis.</p>
+<!-- wp:paragraph -->
+<p>Every lesson is carefully crafted for clarity, depth, and relevance. No fluff—just valuable, actionable knowledge you can apply immediately.</p>
 <!-- /wp:paragraph --></div>
-<!-- /wp:group --></div>
-<!-- /wp:column -->
+<!-- /wp:group -->
 
-<!-- wp:column {"width":"33.34%","style":{"spacing":{"blockGap":"16px"}}} -->
-<div class="wp-block-column" style="flex-basis:33.34%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"32px","right":"32px","bottom":"32px","left":"32px"},"blockGap":"16px"},"border":{"radius":"8px"}},"backgroundColor":"ti-bg-alt","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-ti-bg-alt-background-color has-background" style="border-radius:8px;padding-top:32px;padding-right:32px;padding-bottom:32px;padding-left:32px"><!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium"} -->
-<h3 class="wp-block-heading has-text-align-center has-medium-font-size">Title goes here</h3>
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:image {"id":109,"sizeSlug":"full","linkDestination":"none","style":{"border":{"radius":"16px"}}} -->
+<figure class="wp-block-image size-full has-custom-border"><img src="' . esc_url( $eduacademy_img02 ) . '" alt="" class="wp-image-109" style="border-radius:16px"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Expert Instructors</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">Gloria in excelsis Deo, et pax hominibus bonae voluntatis.</p>
+<!-- wp:paragraph -->
+<p>Learn directly from seasoned professionals with real-world experience. Each instructor brings unique insights, practical skills, and mentorship to your journey.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
-<!-- /wp:column -->
-
-<!-- wp:column {"width":"33.33%","style":{"spacing":{"blockGap":"16px"}}} -->
-<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:group {"style":{"spacing":{"blockGap":"16px","padding":{"top":"32px","right":"32px","bottom":"32px","left":"32px"}},"border":{"radius":"8px"}},"backgroundColor":"ti-bg-alt","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-ti-bg-alt-background-color has-background" style="border-radius:8px;padding-top:32px;padding-right:32px;padding-bottom:32px;padding-left:32px"><!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium"} -->
-<h3 class="wp-block-heading has-text-align-center has-medium-font-size">Title goes here</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">Gloria in excelsis Deo, et pax hominibus bonae voluntatis.</p>
-<!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns -->
-
-<!-- wp:columns {"align":"wide"} -->
-<div class="wp-block-columns alignwide"><!-- wp:column {"width":"33.34%"} -->
-<div class="wp-block-column" style="flex-basis:33.34%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"32px","right":"32px","bottom":"32px","left":"32px"},"blockGap":"16px"},"border":{"radius":"8px"}},"backgroundColor":"ti-bg-alt","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-ti-bg-alt-background-color has-background" style="border-radius:8px;padding-top:32px;padding-right:32px;padding-bottom:32px;padding-left:32px"><!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium"} -->
-<h3 class="wp-block-heading has-text-align-center has-medium-font-size">Title goes here</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">Gloria in excelsis Deo, et pax hominibus bonae voluntatis.</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group --></div>
-<!-- /wp:column -->
-
-<!-- wp:column {"width":"33.34%","style":{"spacing":{"blockGap":"16px"}}} -->
-<div class="wp-block-column" style="flex-basis:33.34%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"32px","right":"32px","bottom":"32px","left":"32px"},"blockGap":"16px"},"border":{"radius":"8px"}},"backgroundColor":"ti-bg-alt","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-ti-bg-alt-background-color has-background" style="border-radius:8px;padding-top:32px;padding-right:32px;padding-bottom:32px;padding-left:32px"><!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium"} -->
-<h3 class="wp-block-heading has-text-align-center has-medium-font-size">Title goes here</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">Gloria in excelsis Deo, et pax hominibus bonae voluntatis.</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group --></div>
-<!-- /wp:column -->
-
-<!-- wp:column {"width":"33.33%","style":{"spacing":{"blockGap":"16px"}}} -->
-<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:group {"style":{"spacing":{"blockGap":"16px","padding":{"top":"32px","right":"32px","bottom":"32px","left":"32px"}},"border":{"radius":"8px"}},"backgroundColor":"ti-bg-alt","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-ti-bg-alt-background-color has-background" style="border-radius:8px;padding-top:32px;padding-right:32px;padding-bottom:32px;padding-left:32px"><!-- wp:heading {"textAlign":"center","level":3,"fontSize":"medium"} -->
-<h3 class="wp-block-heading has-text-align-center has-medium-font-size">Title goes here</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">Gloria in excelsis Deo, et pax hominibus bonae voluntatis.</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
-        ',
+',
 );
